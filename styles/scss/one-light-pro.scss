@@ -1,0 +1,22 @@
+/**
+ * Atom's iconic One Light theme for for tm-static-parser
+ * Copyright (c) 2019 Christian Ivicevic
+ */
+
+// Variables
+$default-background-color: #f2f2f2;
+$default-color: #383a42;
+
+// Colors
+$comment-color: #a0a1a7;
+$keyword-color: #a626a4;
+$string-color: #50a14f;
+$constant-literal-color: #986801;
+$constant-variable-color: #986801;
+$mutable-variable-color: #e45649;
+$operator-color: #0184bc;
+$invokable-color: #4078f2;
+
+@import "./abstractClasses";
+@import "./header";
+@import "./tokens";

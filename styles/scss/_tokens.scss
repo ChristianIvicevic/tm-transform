@@ -1,0 +1,327 @@
+$typescriptScopes: (
+    "typescript": "ts",
+    "typescript jsx": "tsx",
+);
+
+// Root Node
+.token {
+    // Typescript (React), JSDoc, RegExp
+    @each $language, $typescriptSuffix in $typescriptScopes {
+        // Comments
+        &.comment-block-documentation-#{$typescriptSuffix},
+        &.comment-block-#{$typescriptSuffix},
+        &.comment-block-json,
+        &.comment-line-double-slash-#{$typescriptSuffix},
+        &.comment-line-shebang-#{$typescriptSuffix},
+        &.comment-line-triple-slash-directive-#{$typescriptSuffix},
+        &.punctuation-definition-comment-#{$typescriptSuffix},
+        &.punctuation-definition-comment-json,
+        &.punctuation-whitespace-comment-leading-#{$typescriptSuffix} {
+            @extend %comment;
+        }
+
+        // Keywords and Storage Types
+        &.keyword-control-anchor-regexp,
+        &.keyword-control-as-#{$typescriptSuffix},
+        &.keyword-control-conditional-#{$typescriptSuffix},
+        &.keyword-control-export-#{$typescriptSuffix},
+        &.keyword-control-flow-#{$typescriptSuffix},
+        &.keyword-control-from-#{$typescriptSuffix},
+        &.keyword-control-import-#{$typescriptSuffix},
+        &.keyword-control-loop-#{$typescriptSuffix},
+        &.keyword-control-switch-#{$typescriptSuffix},
+        &.keyword-control-trycatch-#{$typescriptSuffix},
+        &.keyword-operator-expression-delete-#{$typescriptSuffix},
+        &.keyword-operator-expression-import-#{$typescriptSuffix},
+        &.keyword-operator-expression-in-#{$typescriptSuffix},
+        &.keyword-operator-expression-infer-#{$typescriptSuffix},
+        &.keyword-operator-expression-instanceof-#{$typescriptSuffix},
+        &.keyword-operator-expression-is-#{$typescriptSuffix},
+        &.keyword-operator-expression-keyof-#{$typescriptSuffix},
+        &.keyword-operator-expression-of-#{$typescriptSuffix},
+        &.keyword-operator-expression-typeof-#{$typescriptSuffix},
+        &.keyword-operator-expression-void-#{$typescriptSuffix},
+        &.keyword-operator-new-#{$typescriptSuffix},
+        &.keyword-other-#{$typescriptSuffix},
+        &.storage-modifier-#{$typescriptSuffix},
+        &.storage-modifier-async-#{$typescriptSuffix},
+        &.storage-type-class-jsdoc,
+        &.storage-type-class-#{$typescriptSuffix},
+        &.storage-type-enum-#{$typescriptSuffix},
+        &.storage-type-function-#{$typescriptSuffix},
+        &.storage-type-function-arrow-#{$typescriptSuffix},
+        &.storage-type-interface-#{$typescriptSuffix},
+        &.storage-type-namespace-#{$typescriptSuffix},
+        &.storage-type-#{$typescriptSuffix},
+        &.storage-type-property-#{$typescriptSuffix},
+        &.storage-type-type-#{$typescriptSuffix} {
+            @extend %keyword;
+        }
+
+        // Strings
+        &.punctuation-definition-string-begin-#{$typescriptSuffix},
+        &.punctuation-definition-string-end-#{$typescriptSuffix},
+        &.punctuation-definition-string-template-begin-#{$typescriptSuffix},
+        &.punctuation-definition-string-template-end-#{$typescriptSuffix},
+        &.string-template-#{$typescriptSuffix},
+        &.string-quoted-double-#{$typescriptSuffix},
+        &.string-quoted-single-#{$typescriptSuffix} {
+            @extend %string;
+        }
+
+        // Constant Numeric Literals
+        &.constant-numeric-binary-#{$typescriptSuffix},
+        &.constant-numeric-decimal-#{$typescriptSuffix},
+        &.constant-numeric-hex-#{$typescriptSuffix},
+        &.constant-numeric-octal-#{$typescriptSuffix},
+        &.meta-delimiter-decimal-period-#{$typescriptSuffix} {
+            @extend %constant-literal;
+        }
+
+        // Operators
+        &.keyword-operator-arithmetic-#{$typescriptSuffix},
+        &.keyword-operator-assignment-compound-bitwise-#{$typescriptSuffix},
+        &.keyword-operator-assignment-compound-#{$typescriptSuffix},
+        &.keyword-operator-assignment-jsdoc,
+        &.keyword-operator-assignment-#{$typescriptSuffix},
+        &.keyword-operator-bitwise-shift-#{$typescriptSuffix},
+        &.keyword-operator-bitwise-#{$typescriptSuffix},
+        &.keyword-operator-comparison-#{$typescriptSuffix},
+        &.keyword-operator-control-jsdoc,
+        &.keyword-operator-decrement-#{$typescriptSuffix},
+        &.keyword-operator-definiteassignment-#{$typescriptSuffix},
+        &.keyword-operator-increment-#{$typescriptSuffix},
+        &.keyword-operator-logical-#{$typescriptSuffix},
+        &.keyword-operator-negation-regexp,
+        &.keyword-operator-optional-#{$typescriptSuffix},
+        &.keyword-operator-or-regexp,
+        &.keyword-operator-quantifier-regexp,
+        &.keyword-operator-relational-#{$typescriptSuffix},
+        &.keyword-operator-rest-#{$typescriptSuffix},
+        &.keyword-operator-spread-#{$typescriptSuffix},
+        &.keyword-operator-ternary-#{$typescriptSuffix},
+        &.keyword-operator-type-annotation-#{$typescriptSuffix},
+        &.keyword-operator-type-asserts-#{$typescriptSuffix},
+        &.keyword-operator-type-modifier-#{$typescriptSuffix},
+        &.keyword-operator-type-#{$typescriptSuffix} {
+            @extend %operator;
+        }
+
+        // Punctuation
+        &.meta-brace-angle-#{$typescriptSuffix},
+        &.meta-brace-round-#{$typescriptSuffix},
+        &.meta-brace-square-#{$typescriptSuffix},
+        &.punctuation-accessor-#{$typescriptSuffix},
+        &.punctuation-decorator-#{$typescriptSuffix},
+        &.punctuation-definition-block-#{$typescriptSuffix},
+        &.punctuation-definition-binding-pattern-array-#{$typescriptSuffix},
+        &.punctuation-definition-binding-pattern-object-#{$typescriptSuffix},
+        &.punctuation-definition-parameters-begin-#{$typescriptSuffix},
+        &.punctuation-definition-parameters-end-#{$typescriptSuffix},
+        &.punctuation-definition-section-case-statement-#{$typescriptSuffix},
+        &.punctuation-definition-tag-begin-tsx,
+        &.punctuation-definition-tag-end-tsx,
+        &.punctuation-definition-typeparameters-begin-#{$typescriptSuffix},
+        &.punctuation-definition-typeparameters-end-#{$typescriptSuffix},
+        &.punctuation-section-embedded-begin-tsx,
+        &.punctuation-section-embedded-end-tsx,
+        &.punctuation-separator-comma-#{$typescriptSuffix},
+        &.punctuation-separator-parameter-#{$typescriptSuffix},
+        &.punctuation-separator-key-value-#{$typescriptSuffix},
+        &.punctuation-terminator-statement-#{$typescriptSuffix} {
+            @extend %punctuation;
+        }
+
+        // JSDoc Tags in Comments
+        &.punctuation-definition-block-tag-jsdoc {
+            @extend %keyword;
+        }
+
+        // Constants
+        &.constant-language-access-type-jsdoc,
+        &.constant-language-boolean-false-#{$typescriptSuffix},
+        &.constant-language-boolean-true-#{$typescriptSuffix},
+        &.constant-language-import-export-all-#{$typescriptSuffix},
+        &.constant-language-infinity-#{$typescriptSuffix},
+        &.constant-language-nan-#{$typescriptSuffix},
+        &.constant-language-null-#{$typescriptSuffix},
+        &.constant-language-symbol-type-jsdoc,
+        &.constant-language-undefined-#{$typescriptSuffix} {
+            @extend %constant-literal;
+        }
+
+        // Attributes
+        &.entity-other-attribute-name-tsx {
+            @extend %constant-literal;
+        }
+
+        // Variable Language
+        &.variable-language-super-#{$typescriptSuffix},
+        &.variable-language-this-#{$typescriptSuffix} {
+            @extend %builtin;
+        }
+
+        // Constant Variables
+        &.variable-other-constant-#{$typescriptSuffix},
+        &.variable-other-constant-object-#{$typescriptSuffix},
+        &.variable-other-constant-object-property-#{$typescriptSuffix},
+        &.variable-other-constant-property-#{$typescriptSuffix} {
+            @extend %constant-variable;
+        }
+
+        // Mutable Variables
+        &.variable-other-readwrite-#{$typescriptSuffix},
+        &.variable-other-readwrite-alias-#{$typescriptSuffix} {
+            @extend %mutable-variable;
+        }
+
+        // Entities
+        &.entity-name-type-#{$typescriptSuffix},
+        &.entity-name-tag-tsx,
+        &.entity-name-type-alias-#{$typescriptSuffix},
+        &.entity-name-type-class-#{$typescriptSuffix},
+        &.entity-name-type-enum-#{$typescriptSuffix},
+        &.entity-name-type-interface-#{$typescriptSuffix},
+        &.entity-name-type-module-#{$typescriptSuffix},
+        &.entity-other-inherited-class-#{$typescriptSuffix} {
+            @extend %constant-variable;
+        }
+
+        // Invokable
+        &.entity-name-function-#{$typescriptSuffix},
+        &.entity-name-function-tagged-template-#{$typescriptSuffix},
+        &.support-function-#{$typescriptSuffix},
+        &.support-function-console-#{$typescriptSuffix},
+        &.support-function-dom-#{$typescriptSuffix},
+        &.support-function-event-handler-#{$typescriptSuffix},
+        &.support-function-json-#{$typescriptSuffix},
+        &.support-function-promise-#{$typescriptSuffix} {
+            @extend %invokable;
+        }
+
+        // Parameter
+        &.variable-parameter-#{$typescriptSuffix} {
+            @extend %parameter;
+        }
+
+        // Other
+        &.variable-object-property-#{$typescriptSuffix},
+        &.variable-other-enummember-#{$typescriptSuffix},
+        &.variable-other-object-#{$typescriptSuffix},
+        &.variable-other-property-#{$typescriptSuffix},
+        &.variable-other-object-property-#{$typescriptSuffix} {
+            @extend %other;
+        }
+
+        // Builtin
+        &.support-class-builtin-#{$typescriptSuffix},
+        &.support-class-console-#{$typescriptSuffix},
+        &.support-class-dom-#{$typescriptSuffix},
+        &.support-class-promise-#{$typescriptSuffix},
+        &.support-constant-json-#{$typescriptSuffix},
+        &.support-constant-math-#{$typescriptSuffix},
+        &.support-type-builtin-#{$typescriptSuffix},
+        &.support-type-primitive-#{$typescriptSuffix} {
+            @extend %builtin;
+        }
+
+        // Support Variable Property
+        &.support-variable-property-#{$typescriptSuffix},
+        &.support-variable-property-dom-#{$typescriptSuffix} {
+            @extend %other;
+        }
+
+        // JS Builtin: DOM
+        &.support-variable-dom-#{$typescriptSuffix},
+        &.support-variable-object-process-#{$typescriptSuffix} {
+            @extend %builtin-support;
+        }
+
+        // Node Builtin: Process Properties
+        &.support-variable-property-process-#{$typescriptSuffix} {
+            @extend %builtin-support-property;
+        }
+
+        // JS Builtin: Math Function
+        &.support-function-math-#{$typescriptSuffix} {
+            @extend %operator;
+        }
+
+        // String Escape
+        &.constant-character-escape-#{$typescriptSuffix},
+        &.constant-character-escape-backslash-regexp,
+        &.punctuation-definition-group-regexp {
+            @extend %operator;
+        }
+
+        // RegExp
+        &.constant-other-character-class-range-regexp,
+        &.punctuation-definition-character-class-regexp {
+            @extend %constant-literal;
+        }
+
+        &.constant-other-character-class-regexp {
+            @extend %other;
+        }
+
+        &.string-regexp-#{$typescriptSuffix} {
+            @extend %operator;
+        }
+
+        // Property Literal
+        &.meta-object-literal-key-#{$typescriptSuffix} {
+            @extend %mutable-variable;
+        }
+
+        // String Template Operators
+        &.punctuation-definition-template-expression-begin-#{$typescriptSuffix},
+        &.punctuation-definition-template-expression-end-#{$typescriptSuffix} {
+            @extend %keyword;
+        }
+
+        // Meta Block
+        &.meta-block-#{$typescriptSuffix},
+        &.meta-jsx-children-tsx {
+            // This could be a false positive on certain static enum/class properties like Number.POSITIVE_INFINITY
+            @extend %no-fallback;
+        }
+    }
+
+    // JSONC
+    // Comments
+    &.comment-block-json,
+    &.punctuation-definition-comment-json {
+        @extend %comment;
+    }
+
+    // Punctuation
+    &.punctuation-definition-array-begin-json,
+    &.punctuation-definition-array-end-json,
+    &.punctuation-definition-dictionary-begin-json,
+    &.punctuation-definition-dictionary-end-json,
+    &.punctuation-separator-array-json,
+    &.punctuation-separator-dictionary-key-value-json,
+    &.punctuation-separator-dictionary-pair-json {
+        @extend %punctuation;
+    }
+
+    // Property
+    &.support-type-property-name-json,
+    &.punctuation-support-type-property-name-begin-json,
+    &.punctuation-support-type-property-name-end-json {
+        @extend %keyword;
+    }
+
+    // Strings
+    &.string-quoted-double-json,
+    &.punctuation-definition-string-begin-json,
+    &.punctuation-definition-string-end-json {
+        @extend %string;
+    }
+
+    // Constant
+    &.constant-numeric-json,
+    &.constant-language-json {
+        @extend %constant-literal;
+    }
+}

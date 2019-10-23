@@ -1,0 +1,76 @@
+// Abstract classes
+%no-fallback {
+    background: transparent;
+}
+
+%comment {
+    @extend %no-fallback;
+    color: $comment-color;
+    font-style: italic;
+}
+
+%keyword {
+    @extend %no-fallback;
+    color: $keyword-color;
+}
+
+%string {
+    @extend %no-fallback;
+    color: $string-color;
+}
+
+%constant-literal {
+    @extend %no-fallback;
+    color: $constant-literal-color;
+}
+
+%constant-variable {
+    @extend %no-fallback;
+    color: $constant-variable-color;
+}
+
+%builtin {
+    @extend %no-fallback;
+    color: $constant-variable-color;
+}
+
+%mutable-variable {
+    @extend %no-fallback;
+    color: $mutable-variable-color;
+}
+
+%operator {
+    @extend %no-fallback;
+    color: $operator-color;
+}
+
+%punctuation {
+    @extend %no-fallback;
+    color: $default-color;
+}
+
+%invokable {
+    @extend %no-fallback;
+    color: $invokable-color;
+}
+
+%parameter {
+    @extend %no-fallback;
+    color: $mutable-variable-color;
+    font-style: italic;
+}
+
+%other {
+    @extend %no-fallback;
+    color: $mutable-variable-color;
+}
+
+%builtin-support {
+    @extend %no-fallback;
+    color: $mutable-variable-color;
+}
+
+%builtin-support-property {
+    @extend %no-fallback;
+    color: $constant-literal-color;
+}

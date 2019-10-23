@@ -1,0 +1,106 @@
+{
+    "name": "tm-transform",
+    "description": "Source code parser and transformer based on Textmate grammars",
+    "version": "0.1.0-SNAPSHOT",
+    "private": true,
+    "files": [
+        "dist/bin",
+        "styles/css",
+        "LICENSE",
+        "README.md"
+    ],
+    "bin": {
+        "tm-transform": "dist/bin/tm-transform.js"
+    },
+    "scripts": {
+        "lint": "eslint src/**/*.ts",
+        "watch": "nodemon",
+        "dev": "yarn build && node dist/lib/sandbox.js",
+        "build": "ttsc",
+        "clean": "shx rm -rf dist && shx rm .tsbuildinfo",
+        "generate:styles": "node-sass --recursive --output styles/css/ styles/scss/",
+        "generate:styles:watch": "node-sass --watch --recursive --output styles/css/ styles/scss/",
+        "generate:scopes": "ts-node -C ttypescript src/scripts/generateScopes.ts",
+        "generate:grammars": "ts-node -C ttypescript src/scripts/generateGrammars.ts",
+        "generate": "yarn generate:grammars && yarn generate:scopes && yarn generate:styles",
+        "rollup": "rollup -c",
+        "rollup:watch": "rollup -cw",
+        "prepack": "yarn generate && yarn rollup"
+    },
+    "dependencies": {
+        "ansi-regex": "^5.0.0",
+        "callsites": "^3.1.0",
+        "chalk": "^2.4.2",
+        "change-case": "^3.1.0",
+        "dedent": "^0.7.0",
+        "eol": "^0.9.1",
+        "html-entities": "^1.2.1",
+        "js-base64": "^2.5.1",
+        "lodash": "^4.17.15",
+        "strip-ansi": "^5.2.0",
+        "typescript-optional": "^2.0.1",
+        "vscode-textmate": "^4.2.2",
+        "winston": "^3.2.1",
+        "yargs": "^14.2.0"
+    },
+    "devDependencies": {
+        "@types/ansi-regex": "^5.0.0",
+        "@types/change-case": "^2.3.1",
+        "@types/dedent": "^0.7.0",
+        "@types/html-entities": "^1.2.16",
+        "@types/js-base64": "^2.3.1",
+        "@types/lodash": "^4.14.144",
+        "@types/node": "^12.11.5",
+        "@types/plist": "^3.0.2",
+        "@types/yargs": "^13.0.3",
+        "@typescript-eslint/eslint-plugin": "2.4.0",
+        "@typescript-eslint/parser": "2.4.0",
+        "@zerollup/ts-transform-paths": "^1.7.3",
+        "eslint": "^6.5.1",
+        "eslint-config-prettier": "^6.4.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-prettier": "^3.1.1",
+        "husky": "^3.0.9",
+        "lint-staged": "^9.4.2",
+        "node-sass": "^4.12.0",
+        "nodemon": "^1.19.3",
+        "plist": "^3.0.1",
+        "prettier": "^1.18.2",
+        "rollup": "^1.25.2",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-json": "^4.0.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-terser": "^5.1.2",
+        "rollup-plugin-typescript2": "^0.24.3",
+        "shx": "^0.3.2",
+        "ts-node": "^8.4.1",
+        "tslib": "^1.10.0",
+        "ttypescript": "^1.5.7",
+        "type-fest": "^0.8.1",
+        "typescript": "^3.6.4",
+        "typescript-tmlanguage": "https://github.com/microsoft/TypeScript-TmLanguage",
+        "vscode-JSON.tmLanguage": "https://github.com/microsoft/vscode-JSON.tmLanguage"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.ts": [
+            "eslint",
+            "git add"
+        ]
+    },
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "singleQuote": false,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "semi": true,
+        "useTabs": false,
+        "arrowParens": "always",
+        "proseWrap": "never"
+    }
+}

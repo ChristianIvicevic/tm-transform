@@ -1,0 +1,11 @@
+// This fixes weird selection behaviour across multiple lines
+table.highlight {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+// Root Node
+.token {
+    // Fallback color to track unstyled scopes
+    background: magenta;
+}
