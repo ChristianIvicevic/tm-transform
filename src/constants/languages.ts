@@ -6,7 +6,7 @@ export const supportedLanguages: Record<string, string> = {
 };
 
 export const grammarFiles: [string, string][] = [
-    ["typescript", "./node_modules/TypeScript-TmLanguage/TypeScript.tmLanguage"],
-    ["typescriptReact", "./node_modules/TypeScript-TmLanguage/TypeScriptReact.tmLanguage"],
+    ["typescript", "./node_modules/typescript-tmlanguage/TypeScript.tmLanguage"],
+    ["typescriptReact", "./node_modules/typescript-tmlanguage/TypeScriptReact.tmLanguage"],
     ["json", "./node_modules/vscode-JSON.tmLanguage/JSON.tmLanguage"],
 ];
