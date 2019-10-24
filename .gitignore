@@ -2,6 +2,7 @@
 styles/css/
 src/languages/
 src/scopes.ts
+dist/
 
 ### Linux ###
 *~
