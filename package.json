@@ -9,6 +9,8 @@
         "LICENSE",
         "README.md"
     ],
+    "homepage": "https://github.com/ChristianIvicevic/tm-transform",
+    "license": "MIT",
     "bin": {
         "tm-transform": "dist/bin/tm-transform.js"
     },
@@ -25,7 +27,7 @@
         "generate": "yarn generate:grammars && yarn generate:scopes && yarn generate:styles",
         "rollup": "rollup -c",
         "rollup:watch": "rollup -cw",
-        "prepack": "yarn generate && yarn rollup"
+        "prepare": "yarn generate && yarn rollup"
     },
     "dependencies": {
         "ansi-regex": "^5.0.0",
